@@ -1,13 +1,13 @@
 import React from 'react';
 
 
-import Powders from './Powders';
+import ProductCaps from '../ProductCaps';
 
 
 function Capsules() {
   return (
     <>
-      <Powders />
+      <ProductCaps />
       
       
     </>
