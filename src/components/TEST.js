@@ -10,7 +10,7 @@ class TST extends React.Component {
     isLoading: true,
     users: [],
     error: null
-  };
+  }
 
   fetchUsers() {
     fetch(`https://jsonplaceholder.typicode.com/users`)
@@ -36,7 +36,9 @@ class TST extends React.Component {
         {!isLoading ? (
           users.map(user => {
             const { username, name, email } = user;
-            return (
+            if (username == "Bret")
+            
+            return ( 
               <div key={username}>
               <p>Username: {username}</p>
                 <p>Name: {name}</p>
@@ -45,6 +47,7 @@ class TST extends React.Component {
               </div>
             );
           })
+          
         ) : (
           <h3>Loading...</h3>
         )}
@@ -56,12 +59,11 @@ class TST extends React.Component {
 
 ReactDOM.render(<TEST/>, document.getElementById("root"));
 
-
 function TEST() {
 
   return(
   <>
-  {}
+ 
 </>
   );
 }
