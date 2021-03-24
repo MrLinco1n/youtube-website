@@ -1,5 +1,5 @@
 import React from 'react';
-import TEST from '../TEST';
+import TEST from './TEST';
 
 
 

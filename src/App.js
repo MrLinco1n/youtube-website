@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Home from './components/pages/Home'
 import Capsules from './components/pages/Capsules'
 import Powders from './components/pages/Powders'
+import SignUp from './components/pages/SignUp'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -21,6 +22,11 @@ function App() {
        <Switch>
       <Route path='/Powders' exact component={Powders}/>
       </Switch>
+
+     <Switch>
+      <Route path='/SignUp' exact component={SignUp}/>
+      </Switch>
+
       </Router>
 
     </>
