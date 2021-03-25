@@ -1,8 +1,12 @@
 import React from "react"
 import "../App.css";
+import React, {useState, useEffect} from 'react'
 
-
-const Item =(props)=>{
+function Item(props) {
+  const [click, setClick] = useState(false);
+ const handleClick = () => setClick(!click);
+const closeMobileMenu = () => setClick(false);
+  
 
   return(
     <div className='grid-item'>
@@ -12,13 +16,17 @@ const Item =(props)=>{
 
       <p>Item_Id: {props.details.Item_Id}</p>
 
-       <p>Item_price: {props.details.Item_price}</p>
+       <p>Price: {props.details.Item_price}</p>
        
-       <p>Item_discount: {props.details.Item_discount}</p>
+       <p>Bundle discount: {props.details.Item_discount}</p>
 
-       <p>Item_features: {props.details.Item_features}</p>
+       <p>About: {props.details.Item_features}</p>
 
-       <input type = "button" onClick = "delete" value= "Add to Cart"/>
+        <button className='button' onClick="delete">
+        Quick view
+        </button>
+
+       <input type = "button" onClick ={handleClick} value= "Add to Cart"/>
 
     </div>
   )

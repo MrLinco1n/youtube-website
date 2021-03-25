@@ -1,23 +1,47 @@
 import React from 'react';
 import '../App.css';
-import { setState } from "react";
+import React, {useState, useEffect} from 'react'
 import Item from "./Item"
 import ReactDOM  from 'react-dom';
 
+function TEST(props) {
+  const [click, setClick] = useState(false);
+ const handleClick = () => setClick(!click);
+const closeMobileMenu = () => setClick(false);
+  return (
+  /* 1  The onClick prop on the built-in DOM <button> component tells React to set up a click event listener.*/
 
-const TEST = () => {
+<div>
 
-    return (
+ 
+
+  <div className="square">
+
+
+
+    <button className="button" onClick={props.onClick}>
+      {props.value}
+    </button>
+    </div>
+    
+  
+
+
+
+
+
+
 
         <div>
 
             <Item
 
                 details={{Item_Id: "001", Item_name: "Green Maeng Da", Item_price: "27.75", Item_discount: "30%", Item_features: "Whites can be great for energy as well as anxiety relief, and focus.", Item_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2ZVAyKOm56WtCIQSN0mLNYXN0ZjwKaxohmw&usqp=CAU"}}
+                
 
             />
 
-           
+          
 
            <Item
 
@@ -79,7 +103,7 @@ const TEST = () => {
            
 
         </div>
-
+</div>
     )
 
 }
