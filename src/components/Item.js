@@ -2,10 +2,29 @@ import React from "react"
 import "../App.css";
 import React, {useState, useEffect} from 'react'
 
+
+/*
+class Item extends React.Component {
+   constructor(props) {
+    super(props);
+    this.state = {
+      InCart: Array(9).fill(null),
+    };
+  }
+
+  renderSquare(i) {
+    return <Square value={i} />;
+  }
+*/
+
+
+
+
+
 function Item(props) {
   const [click, setClick] = useState(false);
  const handleClick = () => setClick(!click);
-const closeMobileMenu = () => setClick(false);
+
   
 
   return(
