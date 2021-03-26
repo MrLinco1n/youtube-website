@@ -4,11 +4,30 @@ import React, {useState, useEffect} from 'react'
 import Item from "./Item"
 import ReactDOM  from 'react-dom';
 
+
+class StatTest extends React.Component {
+   constructor(props) {
+    super(props);
+    this.state = {
+      InCart: Item,
+    };
+    this.props = { counter: 0
+
+    }
+  }
+
+    render()
+  
+
+}
+
+
+
 function TEST(props) {
   const [click, setClick] = useState(false);
  const handleClick = () => setClick(!click);
 const closeMobileMenu = () => setClick(false);
-  return (
+  return(
   /* 1  The onClick prop on the built-in DOM <button> component tells React to set up a click event listener.*/
 
 <div>

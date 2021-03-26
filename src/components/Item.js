@@ -3,19 +3,6 @@ import "../App.css";
 import React, {useState, useEffect} from 'react'
 
 
-/*
-class Item extends React.Component {
-   constructor(props) {
-    super(props);
-    this.state = {
-      InCart: Array(9).fill(null),
-    };
-  }
-
-  renderSquare(i) {
-    return <Square value={i} />;
-  }
-*/
 
 
 
@@ -25,7 +12,6 @@ function Item(props) {
   const [click, setClick] = useState(false);
  const handleClick = () => setClick(!click);
 
-  
 
   return(
     <div className='grid-item'>
@@ -39,11 +25,13 @@ function Item(props) {
        
        <p>Bundle discount: {props.details.Item_discount}</p>
 
-       <p>About: {props.details.Item_features}</p>
+       <p>Description: {props.details.Item_features}</p>
 
         <button className='button' onClick="delete">
         Quick view
         </button>
+
+        <p> Items in cart: {}</p>
 
        <input type = "button" onClick ={handleClick} value= "Add to Cart"/>
 
